@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NC TECH SOLUTIONS LTD</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #b0b0b0;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            font-size: 16px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            background-color: #fff;
+        }
+
+        .hero-text {
+            max-width: 50%;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .hero button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .hero button:hover {
+            background-color: #555;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10%;
+        }
+
+        .contact-section {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            padding: 50px;
+            background-color: #fff;
+        }
+
+        .contact-item {
+            text-align: center;
+            max-width: 300px;
+        }
+
+        .contact-item h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .contact-item p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .contact-item img {
+            width: 40px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            font-size: 14px;
+            
+        }
+        .header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 300px;
+    background-image: url('https://cdn.pixabay.com/photo/2021/10/11/17/54/technology-6701504_640.jpg'); /* Image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    z-index: 1;
+}
+
+.header * {
+    position: relative;
+    z-index: 2; /* Ensures text and nav are above overlay */
+}
+
+.header h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.header nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.header nav ul li a:hover {
+    color: #ddd; /* Subtle hover effect */
+}
+
+.contact {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 400px;
+        padding: 20px;
+    }
+    .header h1 {
+        font-size: 28px;
+    }
+    .header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+
+        .hero .image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .hero .image img {
+            max-width: 100%;
+            border-radius: 12px;
+        }
+
+        .hero .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .hero .content h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .hero .content p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .hero .content button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .hero .content button:hover {
+            background-color: #555;
+        }
+
+        .features {
+            background-color: #f1f1f1;
+            padding: 60px 20px;
+        }
+
+        .features h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .feature {
+            background-color: #333;
+            color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: left;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .why-choose-us {
+            padding: 60px 20px;
+        }
+
+        .why-choose-us h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .why-choose-us-content {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .why-choose-us img {
+            max-width: 100%;
+            border-radius: 12px;
+        }
+
+        .why-choose-us-text {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .why-choose-us-text p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+    /* Services Section */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 50px 20px;
+      background-color: #ffffff;
+      background-image: url("https://cdn.vectorstock.com/i/500p/84/65/abstract-white-monochrome-background-vector-32028465.jpg");
+    }
+
+    .service-card {
+      background-color: #2d2d2d;
+      color: #ffffff;
+      padding: 30px;
+      border-radius: 7%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px); 
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .service-card h3 {
+      font-size: 1.5em;
+      margin-bottom: 15px;
+    }
+
+    .service-card p {
+      font-size: 1em;
+      line-height: 1.6;
+    }
+
+    </style>
+</head>
+<body>
+    <header class=header>
+        <div class="logo">
+            <h1>NC TECH SOLUTIONS LTD</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="conatctus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="contact">
+            <p>Call Now<br>+447417449561</p>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Information Technology</h2>
+            <p>Your go-to for exceptional web development and design, delivering both static and dynamic sites with unique flair.</p>
+            <button>Get Started</button>
+        </div>
+        <div class="hero-image">
+            <img src="https://www.innovins.com/wp-content/uploads/2023/07/1-13-1170x700.jpeg" alt="Design illustration" >
+        </div>
+    </section>
+    
+	    <div class="hero">
+        <div class="image">
+            <img src="https://img.freepik.com/free-photo/businesspeople-standing-city-street-shaking-hands_74855-1112.jpg" alt="Web Design Illustration">
+        </div>
+        <div class="content">
+            <h1>WE HELP MAKE WEBSITE BETTER</h1>
+            <p>Our expertise includes skilled web development, website redesign, web design, and the creation of dynamic and static websites. Our primary goal for all types of organizations is to create websites that are efficient, knowledgeable, approachable, and appealing. Our knowledgeable staff transforms the user specifications into the most appropriate form after first understanding the client's requirements.</p>
+            <summary><button>Read More</button></summary>
+        </div>
+    </div>
+    <div class="features section">
+        <h2>We Shine a Light on Your Business</h2>
+        <div class="services-grid">
+            <div class="service-card">
+              <h3>Mobile App Development</h3>
+              <p>We work hard to provide the best UI/UX designs, IoT, and AI-based software solutions to our clients.</p>
+            </div>
+            <div class="service-card">
+              <h3>Digital Marketing</h3>
+              <p>
+                Digital platforms are an effective tool for assisting businesses in becoming more competitive,
+                with the most accurate and quantitative search results.
+              </p>
+            </div>
+            <div class="service-card">
+              <h3>QA Testing</h3>
+              <p>
+                We identify vulnerabilities in your software that cannot be found automatically through manual testing.
+              </p>
+            </div>
+            <div class="service-card">
+              <h3>WordPress Development</h3>
+              <p>
+                We can create a professional WordPress website for your small or large business at a competitive price.
+              </p>
+            </div>
+            <div class="service-card">
+              <h3>Software Development</h3>
+              <p>
+                We are market leaders in expert software development services, specializing in web and mobile apps.
+              </p>
+            </div>
+          </div>
+    </div>
+
+    <div class="why-choose-us section">
+        <h2>Why Choose Us</h2>
+        <div class="why-choose-us-content">
+            <div class="why-choose-us-text">
+                <p><strong>Client Satisfaction:</strong> Built solutions designed and perfected by working closely with clients.</p>
+                <p><strong>End-to-End Expertise:</strong> Comprehensive design, development, and support services.</p>
+                <p><strong>Innovation:</strong> Reliable tech applications, creative ideas, and problem-solving strategies.</p>
+            </div>
+        </div>
+    </div>
+   
+	<section class="contact-section">
+        <div class="contact-item">
+            <img src="https://sannisolutions.co.uk/assets/images/office_add.svg" alt="Office Icon">
+            <h3>Office Address</h3>
+            <p>50 Bruce Street<br>Leicester, London, United Kingdom<br>Post Code: E66ET</p>
+        </div>
+        <div class="contact-item">
+            <img src="https://media.istockphoto.com/id/1494579261/vector/telephone-handset-simple-circle-icon.jpg?s=612x612&w=0&k=20&c=bpf-J3OuFFZDNS3gQQ25Xgp6PKJ_lhbmvuO-kYgNCSg=" alt="Mobile icon">
+            <h3>Mobile</h3>
+            <p>+447417449561</p>
+        </div>
+        <div class="contact-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/666/666162.png" alt="Email Icon">
+            <h3>Email</h3>
+            <p>nikhilesh.chinta38@gmail.com</p>
+        </div>
+    </section>
+	 <footer>
+        &copy; 2025 NC TECH SOLUTIONS LTD. All Rights Reserved.
+    </footer>
+</body>
+</html>
